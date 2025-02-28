@@ -22,6 +22,13 @@
   <h2> Overview </h2>
   <p>In this assignment, students will build a choose-your-own adventure game that integrates generative AI to create a dynamic, interactive, “infinite story” experience for users. The experience is drive by nested dictionary (JSON) objects containing information for each pre-existing "scene" in the story. Each scene is also a nested dictionary containing choices a user could make for where to go next from this point in the story, a scene description, and more. In order to stitch together their infinite story creation, students are challenged to navigate and manipulate this deeply nested data dictionary, and along the way, they develop an appreciation for the utility and structure of dictionary objects. The core concept is that if a user ventures into a scene that hasn't been predefined, the program will request ChatGPT to generate the next scene, allowing the adventure to continue seamlessly.</p>
 
+  <img 
+    src="img/start_of_program.png" 
+    alt="Start of the Infinite Story Program" 
+    class="main-image"
+    width="70%"
+  />
+
   <p>The assignment is broken into milestones, beginning with loading the story data from a JSON file and identifying "dead ends" where scene references exist without corresponding definitions. Students will then create functions to print scenes and allow users to make choices that guide the narrative. As users explore, the game will transition from one scene to another until it encounters an undefined scene, at which point it calls ChatGPT to generate the next part of the story.</p>
 
   <p>The last part of the assignment invites students to reflect on AI ethics and engage in a deeper analysis of the potential strengths, weaknesses, and appropriate applications of integrating Generative AI into their projects.</p>
