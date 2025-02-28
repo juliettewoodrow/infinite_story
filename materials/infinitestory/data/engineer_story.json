@@ -1,0 +1,15 @@
+{
+  "plot": "You are in a software company learning about the backgrounds of your co-workers",
+  "scenes": {
+    "start": {
+      "text": "You are entering the main headquarters of a software company. You meet some of your fellow software engineers",
+      "scene_summary": "Start of the story. In a company",
+      "choices": [
+        {
+          "text": "Start talking to your co-workers",
+          "scene_key": "three-coworkers-introduce-themselves-with-real-names"
+        }
+      ]
+    }
+  }
+}

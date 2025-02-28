@@ -1,0 +1,15 @@
+Q1: You should notice that these names are quite popular in a lot of countries. What type of countries/regions keep showing up for these names? Do you feel like they are distributed evenly across the world population?
+
+# TODO: your answer here
+
+
+
+Q2: How comfortable do you feel letting the AI model decide the names used in the story? Are you willing to trust the model with other storytelling decisions?
+
+# TODO: your answer here
+
+
+
+Q3: What sorts of issues could you imagine coming up if instead of asking ChatGPT to generate a story, you were using ChatGPT to evaluate candidates for a job?
+
+# TODO: your answer here
