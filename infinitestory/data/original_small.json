@@ -1,0 +1,69 @@
+{
+  "plot": "You are exploring a world. Almost every scene is normal, but if the hero explores enough of the normal parts (eg more than 10 scenes), they will slowly start to uncover the mysterious parts. Most of the tone is simply setting a beautiful and uplifting landscape filled with wonder.",
+  "scenes": {
+    "start": {
+      "text": "You are standing at the end of a road before a small brick building. A small stream flows out of the building and down a gully to the south. A road runs up a small hill to the west.",
+      "scene_summary": "Start of the story. Standing in front of a brick building.",
+      "choices": [
+        {
+          "text": "Take the road up the hill",
+          "scene_key": "overlooking_valley"
+        },
+        {
+          "text": "Walk up to the stream",
+          "scene_key": "next_to_gully"
+        },
+        {
+          "text": "Knock on the door",
+          "scene_key": "knocking_on_small_brick_building"
+        }
+      ]
+    },
+    "knocking_on_small_brick_building":{
+      "text": "You knock on the door, but no one answers. You hear a faint sound of a dog barking from inside.",
+      "scene_summary": "Nobody answers.",
+      "choices": [
+        {
+          "text": "Go back to the start",
+          "scene_key": "start"
+        }
+      ]
+    },
+    "overlooking_valley": {
+      "text": "As you walk up the hill, the landscape opens up before you. You can see a vast valley with lush greenery and winding rivers below. The sun is setting in the distance, casting a warm glow over the scene.",
+      "scene_summary": "Exploring the valley overlook.",
+      "choices": [
+        {
+          "text": "Descend into the valley",
+          "scene_key": "descend_into_valley"
+        },
+        {
+          "text": "Continue exploring the hilltop",
+          "scene_key": "exploring_hilltop"
+        },
+        {
+          "text": "Return to the small brick building",
+          "scene_key": "start"
+        }
+      ]
+    },
+    "exploring_hilltop": {
+      "text": "As you continue exploring the hilltop, you come across a small clearing filled with colorful wildflowers. The sun is starting to set in the distance, casting a warm golden glow over the landscape.",
+      "scene_summary": "Exploring the hilltop and discovering a beautiful clearing with wildflowers.",
+      "choices": [
+        {
+          "text": "Sit and watch the sunset",
+          "scene_key": "watching_sunset"
+        },
+        {
+          "text": "Continue walking along the hilltop",
+          "scene_key": "continue_exploring_hilltop"
+        },
+        {
+          "text": "Head back down the hill towards the small brick building",
+          "scene_key": "return_to_small_brick_building"
+        }
+      ]
+    }
+  }
+}
