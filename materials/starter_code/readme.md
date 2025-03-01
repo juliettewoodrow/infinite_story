@@ -20,3 +20,5 @@ There are two versions of this assignment:
 `infinite_story.py` is starter code for students who have about 10 hours for this assignment. It has them write the whole project from scratch.
 
 `infinite_story_lite.py` is starter code for students who have about 5 hours for this assignment. 
+
+Make sure to only include one when you give it to students.

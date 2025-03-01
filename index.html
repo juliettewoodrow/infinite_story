@@ -1,123 +1,277 @@
-
 <html>
+
 <head>
-  <title>Infinite Story</title>
+  <title>Infinite Story - Nifty</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <div class="content-container">
+  <div class="container main-content">
+    <div class="row">
+      <div class="col">
 
-  <div class="header">
-    <div>
-    <h1>Infinite Story</h1>
-    <p>
-      <i>Assignment designed by Chris Piech. Handout written with Anjali
-        Sreenivas, Yasmine Alonso, Katie Liu. Ethics by Javokhir Arifov and Dan Webber. Test scripts by Iddah Mlauzi and Tina Zheng. Advised by Mehran Sahami and Ngoc Nguyen, Juliette Woodrow and more!</i>
-    </p>
+        <div class="header">
+          <div>
+            <h1>Infinite Story</h1>
+            <p>
+              <i>Assignment designed by <a href="https://stanford.edu/~cpiech">Chris Piech</a>. Handout written with
+                Anjali
+                Sreenivas, Yasmine Alonso, Katie Liu. Ethics by Javokhir Arifov and Dan Webber. Test scripts by Iddah
+                Mlauzi
+                and Tina Zheng. Advised by Mehran Sahami and Ngoc Nguyen and Juliette Woodrow</i>
+            </p>
 
+          </div>
+        </div>
+
+        <h2> Overview </h2>
+        <p>In this assignment, students will build a choose-your-own adventure game that integrates generative AI to
+          create
+          a dynamic, interactive, “infinite story” experience for users. The experience is drive by nested dictionary
+          (JSON)
+          objects containing information for each pre-existing "scene" in the story. Each scene is also a nested
+          dictionary
+          containing choices a user could make for where to go next from this point in the story, a scene description,
+          and
+          more. In order to stitch together their infinite story creation, students are challenged to navigate and
+          manipulate this deeply nested data dictionary, and along the way, they develop an appreciation for the utility
+          and
+          structure of dictionary objects. The core concept is that if a user ventures into a scene that hasn't been
+          predefined, the program will request ChatGPT to generate the next scene, allowing the adventure to continue
+          seamlessly.</p>
+
+        <img src="img/start_of_program.png" alt="Start of the Infinite Story Program" class="main-image" />
+
+        <p>The assignment is broken into milestones, beginning with loading the story data from a JSON file and
+          identifying
+          "dead ends" where scene references exist without corresponding definitions. Students will then create
+          functions to
+          print scenes and allow users to make choices that guide the narrative. As users explore, the game will
+          transition
+          from one scene to another until it encounters an undefined scene, at which point it calls ChatGPT to generate
+          the
+          next part of the story.</p>
+
+        <p>The last part of the assignment invites students to reflect on AI ethics and engage in a deeper analysis of
+          the
+          potential strengths, weaknesses, and appropriate applications of integrating Generative AI into their
+          projects.
+        </p>
+
+        <p>By completing this assignment, students will reinforce their understanding of dictionaries, nested data
+          structures, and function decomposition. They will also gain practical experience working with APIs and
+          consider
+          the ethical implications of generative AI.</p>
+
+        <p>We believe the “Nifty” aspect of our assignment comes from a few places:</p>
+        <p>Students learn about and unleash the power of Generative AI to discover “infinity!” When their user reaches a
+          scene that is not present in the story data dictionary, students get to make an API call to ChatGPT to obtain
+          the
+          missing data, and continue onwards. Our assignment is, to the best of our knowledge, one of the first to
+          integrate
+          the usage of LLMs and Generative AI in introductory CS education, opening up exciting possibilities for
+          students.
+        </p>
+
+        <p>We also think it is nifty to show students that Generative AI can be a tool to make their programs more
+          wonderful, rather than just something that can write code.</p>
+
+        <p>As the user visits various scenes, students get to display DallE-generated visuals (provided to them) for the
+          scene, leaving for a memorable experience. </p>
+
+
+        <h2>Assignment Materials</h2>
+
+
+        <div class="row">
+
+          <div class="col-sm-3 col-6 mt-4 text-center">
+						<a target="_blank" href="infinite_story_assn_handout.pdf">
+							<i class="far fa-file-pdf" aria-hidden="true" style="font-size: 5em;"></i>
+							<br /><br />
+							<span style="margin-left:3px">Assignment Handout</span>
+						</a>
+					</div>
+
+
+          <div class="col-sm-3 col-6 mt-4 text-center">
+						<a target="_blank" href="starter_code.zip">
+							<i class="fas fa-code" aria-hidden="true" style="font-size: 5em;"></i>
+							<br /><br />
+							<span style="margin-left:3px">Starter Code</span>
+						</a>
+					</div>
+
+          <div class="col-sm-3 col-6 mt-4 text-center">
+						<a target="_blank" href="grading_rubric.pdf">
+							<i class="fas fa-file-pdf" aria-hidden="true" style="font-size: 5em;"></i>
+							<br /><br />
+							<span style="margin-left:3px">Grading Rubric</span>
+						</a>
+					</div>
+
+          <div class="col-sm-3 col-6 mt-4 text-center">
+						<a target="_blank" href="teacher_code.zip">
+							<i class="fas fa-code" aria-hidden="true" style="font-size: 5em;"></i>
+							<br /><br />
+							<span style="margin-left:3px">Teacher Code</span>
+						</a>
+					</div>
+
+        </div>
+
+        <br/><br/>
+      <b>Advanced Materials (Optional)</b>
+      <ul>
+        <li><a href="infinite_story_assn_handout.pdf">Lite Assignment Handout</a> (alternative with more scaffolding)
+        </li>
+        <li><a href="illustrator.zip">Illustrator.zip</a> (image generation)</li>
+        <li><a href="notopenai_server.zip">NotOpenAi Server Code</a> (optionally host your own notopenai key manager)
+        </li>
+      </ul>
+
+
+
+      <h2>Meta Information</h2>
+      <table class="meta-table">
+        <tr>
+          <td>Summary</td>
+          <td>Students build a choose-your-own-adventure game. The game features a starting world, and when players
+            explore beyond it, it uses ChatGPT to create new scenes, allowing the narrative to continue infinitely.
+          </td>
+        </tr>
+        <tr>
+          <td>Topics</td>
+          <td>JSON, nested data structures, API requests, generative AI, displaying images, program decomposition,
+            ethics
+          </td>
+        </tr>
+        <tr>
+          <td>Audience</td>
+          <td>CS1 (capstone, end of term)</td>
+        </tr>
+        <tr>
+          <td>Difficulty</td>
+          <td>
+          </td>
+        </tr>
+        <tr>
+          <td>Strengths</td>
+          <td>Students gain hands-on experience with an exciting and powerful tool. The assignment reinforces
+            practical
+            Python concepts like JSON and f-strings. It provides valuable practice with more complex, nested
+            dictionaries.
+            Instructions are well-structured, breaking down the task into clear steps that guide students through the
+            data
+            structure.</td>
+        </tr>
+        <tr>
+          <td>Weaknesses</td>
+          <td>The assignment introduces a lot of syntax that may be advanced for an introductory course. The nested
+            data
+            structures are also complex and were hard to understand at times for students.</td>
+        </tr>
+        <tr>
+          <td>Dependencies</td>
+          <td>Students should understand string formatting and data structures (specifically lists and dictionaries)
+            and
+            nested data structures. They should also be familiar with graphical programming, specifically Tkinter as
+            the
+            implementation is done in Python.</td>
+        </tr>
+        <tr>
+          <td>Variants</td>
+          <td>Students are encouraged to implement optional extensions. For example, they can create their own
+            storyline
+            by generating JSON files with new scenes, or they can track a "history" of scenes and choices to make the
+            narrative more cohesive. The rest of the optional extensions can be found at the bottom of the assignment
+            handout.</td>
+        </tr>
+      </table>
+
+      <h2>Teaching Notes</h2>
+      <p>
+        In order to provide free access for students to the OpenAI API, we created a wrapper around the OpenAI API,
+        which
+        we call NotOpenAI. We also generated API keys for each student using a single shared account for the class.
+        This
+        allowed students to use the API without needing to create their own accounts or pay for access. The wrapper is
+        available in the starter code for the assignment in the folder titled "notopenai". We then routed all requests
+        through our wrapper function so that we could monitor usage and ensure that students were not abusing the API.
+        This allowed us to provide students with a safe and free way to use the OpenAI API for their assignment. We
+        also
+        provided instructions for students to create their own OpenAI API key if they wanted to use the API outside of
+        the
+        assignment.
+      </p>
+
+      <h2>Feedback</h2>
+
+      <p>Students seemed to enjoy this assignment and found the assignment help their understanding of dictionaries:
+      </p>
+
+      <blockquote class="blockquote-custom">
+        <p>“I thought it was fun. It was a good way to learn about AI and practice using dictionaries and I actually
+          enjoyed the extensions.”</p>
+        <p>“I loved the assignment, it encapsulated the last unit of CS106A very well and was engaging.”</p>
+      </blockquote>
+
+      <p>While the main goal was to give students a chance to further understand dictionaries and nested structures,
+        they
+        also seemed to appreciate the assignment’s use of ChatGPT, especially at a time where it is so relevant:</p>
+
+      <blockquote class="blockquote-custom">
+        <p>“I LOVED IT!!! It was an awesome way to become more familiar w/ LLM in coding, and it was super fun to mess
+          around with and add to.”</p>
+        <p>“I thought it was really nice that the class decided to embrace ChatGPT and teach us how to use it. It was
+          easier once I understood how to call it and retrieve answers. It wasn’t as difficult coding complexity wise
+          but
+          it was definitely fun to use and opened up the path for different things we could do on our own.”</p>
+        <p>“Incredibly cool assignment, very empowering to be able to do this kind of project in an introductory
+          class.”
+        </p>
+      </blockquote>
+
+      <p>Course teaching assistants seemed to feel similarly; one mentioned that they felt as if “students generally
+        liked
+        it” and that it “made them feel they could build something actually useful in the real world.”</p>
+
+
+      <h2>Improvements</h2>
+      <p> Students and course staff seemed to agree that some of the beginning parts (JSON parsing) of the assignment
+        were
+        daunting. It was common for students to feel intimidated and worried to start the assignment without any
+        support
+        because of how complex the nesting was. Perhaps in future offerings of the assignment, extra diagrams/a
+        walkthrough tutorial video for getting started could be made available to students to help them feel less
+        overwhelmed with the beginning stages of the process. </p>
+
+      <h2>Acknowledgements</h2>
+      <p>Infinite Story was inspired by a Nifty 2002 assignment <a
+          href="http://nifty.stanford.edu/2002/EstellNifty2002/">The Adventure Game Assignment</a> by <a
+          href="mailto:j-estell@onu.edu">John K. Estell</a>. Adventure Game was adapted for Stanford University CS106A
+        by
+        <a href="https://cs.stanford.edu/people/eroberts/">Eric Roberts</a>
+      </p>
+
+
+
+    </div>
   </div>
   </div>
+</body>
 
-  <h2> Overview </h2>
-  <p>In this assignment, students will build a choose-your-own adventure game that integrates generative AI to create a dynamic, interactive, “infinite story” experience for users. The experience is drive by nested dictionary (JSON) objects containing information for each pre-existing "scene" in the story. Each scene is also a nested dictionary containing choices a user could make for where to go next from this point in the story, a scene description, and more. In order to stitch together their infinite story creation, students are challenged to navigate and manipulate this deeply nested data dictionary, and along the way, they develop an appreciation for the utility and structure of dictionary objects. The core concept is that if a user ventures into a scene that hasn't been predefined, the program will request ChatGPT to generate the next scene, allowing the adventure to continue seamlessly.</p>
-
-  <img 
-    src="img/start_of_program.png" 
-    alt="Start of the Infinite Story Program" 
-    class="main-image"
-    width="70%"
-  />
-
-  <p>The assignment is broken into milestones, beginning with loading the story data from a JSON file and identifying "dead ends" where scene references exist without corresponding definitions. Students will then create functions to print scenes and allow users to make choices that guide the narrative. As users explore, the game will transition from one scene to another until it encounters an undefined scene, at which point it calls ChatGPT to generate the next part of the story.</p>
-
-  <p>The last part of the assignment invites students to reflect on AI ethics and engage in a deeper analysis of the potential strengths, weaknesses, and appropriate applications of integrating Generative AI into their projects.</p>
-
-  <p>By completing this assignment, students will reinforce their understanding of dictionaries, nested data structures, and function decomposition. They will also gain practical experience working with APIs and consider the ethical implications of generative AI.</p>
-
-  <p>We believe the “Nifty” aspect of our assignment comes from a few places:</p>
-  <p>Students learn about and unleash the power of Generative AI to discover “infinity!” When their user reaches a scene that is not present in the story data dictionary, students get to make an API call to ChatGPT to obtain the missing data, and continue onwards. Our assignment is, to the best of our knowledge, one of the first to integrate the usage of LLMs and Generative AI in introductory CS education, opening up exciting possibilities for students. </p>
-
-  <p>We also think it is nifty to show students that Generative AI can be a tool to make their programs more wonderful, rather than just something that can write code.</p>
-
-  <p>As the user visits various scenes, students get to display DallE-generated visuals (provided to them) for the scene, leaving for a memorable experience. </p>
-  
-
-  <h2>Relevant Links</h2>
-  <p>Here is the <a href="infinite_story_assn_handout.pdf">assignment handout</a> and <a href="starter_code.zip">associated starter code</a>. We also have a folder in the directory named <a href="illustrator.zip">illustrator</a> which is for creating images to go with the story and for reducing the size of the images. We also include the <a href="grading_rubric.pdf">grading rubric</a> used for reference.</p>
-
-
-
-<h2>Meta Information</h2>
-<table class="meta-table">
-  <tr>
-    <td>Summary</td>
-    <td>Students build a choose-your-own-adventure game. The game features a starting world, and when players explore beyond it, it uses ChatGPT to create new scenes, allowing the narrative to continue infinitely. </td>
-  </tr>
-  <tr>
-    <td>Topics</td>
-    <td>JSON, nested data structures, API requests, generative AI, displaying images, program decomposition, ethics</td>
-  </tr>
-  <tr>
-    <td>Audience</td>
-    <td>CS1 (capstone, end of term)</td>
-  </tr>
-  <tr>
-    <td>Difficulty</td>
-    <td>
-    </td>
-  </tr>
-  <tr><td>Strengths</td>
-    <td>Students gain hands-on experience with an exciting and powerful tool. The assignment reinforces practical Python concepts like JSON and f-strings. It provides valuable practice with more complex, nested dictionaries. Instructions are well-structured, breaking down the task into clear steps that guide students through the data structure.</td>
-  </tr>
-  <tr>
-    <td>Weaknesses</td>
-    <td>The assignment introduces a lot of syntax that may be advanced for an introductory course. The nested data structures are also complex and were hard to understand at times for students.</td>
-  </tr>
-  <tr>
-    <td>Dependencies</td>
-    <td>Students should understand string formatting and data structures (specifically lists and dictionaries) and nested data structures. They should also be familiar with graphical programming, specifically Tkinter as the implementation is done in Python.</td>
-  </tr>
-  <tr>
-    <td>Variants</td>
-    <td>Students are encouraged to implement optional extensions. For example, they can create their own storyline by generating JSON files with new scenes, or they can track a "history" of scenes and choices to make the narrative more cohesive. The rest of the optional extensions can be found at the bottom of the assignment handout.</td>
-  </tr>
-</table>
-
-<h2>Teaching Notes</h2>
-<p>
-  In order to provide free access for students to the OpenAI API, we created a wrapper around the OpenAI API, which we call NotOpenAI. We also generated API keys for each student using a single shared account for the class. This allowed students to use the API without needing to create their own accounts or pay for access. The wrapper is available in the starter code for the assignment in the folder titled "notopenai". We then routed all requests through our wrapper function so that we could monitor usage and ensure that students were not abusing the API. This allowed us to provide students with a safe and free way to use the OpenAI API for their assignment. We also provided instructions for students to create their own OpenAI API key if they wanted to use the API outside of the assignment.
-</p>
-
-<h2>Feedback</h2>
-
-  <p>Students seemed to enjoy this assignment and found the assignment help their understanding of dictionaries:</p>
-
-  <blockquote>
-  <p>“I thought it was fun. It was a good way to learn about AI and practice using dictionaries and I actually enjoyed the extensions.”</p>
-  <p>“I loved the assignment, it encapsulated the last unit of CS106A very well and was engaging.”</p>
-  </blockquote>
-
-  <p>While the main goal was to give students a chance to further understand dictionaries and nested structures, they also seemed to appreciate the assignment’s use of ChatGPT, especially at a time where it is so relevant:</p>
-
-  <blockquote>
-  <p>“I LOVED IT!!! It was an awesome way to become more familiar w/ LLM in coding, and it was super fun to mess around with and add to.”</p>
-  <p>“I thought it was really nice that the class decided to embrace ChatGPT and teach us how to use it. It was easier once I understood how to call it and retrieve answers. It wasn’t as difficult coding complexity wise but it was definitely fun to use and opened up the path for different things we could do on our own.”</p>
-  <p>“Incredibly cool assignment, very empowering to be able to do this kind of project in an introductory class.”</p>
-  </blockquote>
-
-  <p>Course teaching assistants seemed to feel similarly; one mentioned that they felt as if “students generally liked it” and that it “made them feel they could build something actually useful in the real world.”</p>
-
-
-<h2>Improvements</h2>
-  <p> Students and course staff seemed to agree that some of the beginning parts (JSON parsing) of the assignment were daunting. It was common for students to feel intimidated and worried to start the assignment without any support because of how complex the nesting was. Perhaps in future offerings of the assignment, extra diagrams/a walkthrough tutorial video for getting started could be made available to students to help them feel less overwhelmed with the beginning stages of the process. </p>
-
-<h2>Acknowledgements</h2>
-  <p>This assignment was inspired by Eric Roberts. 
-  </p>  
-    
-    
-
-  </div>
-  </body>
-  </html>
+</html>

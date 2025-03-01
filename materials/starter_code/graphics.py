@@ -9,14 +9,6 @@ Version Date: Apr 10, 2024
 This library is a lightweight wrapper around the tkinter library to make it easier to create graphical programs for students. You can always use
 this library in your python code, simply place this folder in the same file
 as your graphics program!. 
-
-TODO notes:
-- support window resizing
-- getters for font, outline width, etc.
-- mouse dragged
-- wait for key press
-- rotate images
-- create polygon
 """
 
 
