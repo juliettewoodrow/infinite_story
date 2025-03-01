@@ -2,7 +2,9 @@ import requests
 import json
 
 correct_model = "gpt-3.5-turbo"
-url = "[fill in with your cloud function url]"
+
+# If you host your own NotOpenAi server, change this!
+url = "https://us-central1-notopenai-31af6.cloudfunctions.net/notopenai"
 
 class NotOpenAI:
     def __init__(self, api_key='your_default_api_key'):

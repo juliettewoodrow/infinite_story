@@ -1,6 +1,17 @@
 import requests
 import json
 
+options = {
+    # The total number of tokens that can be generated with each API key
+    "maxTotalTokens": 1500000,
+    "maxTokensPerRequest": 500,
+    # You can only make requests at this rate (requests per resetTimeSecs)
+    "maxRequestsWithoutReset": 3,
+    "resetTimeSecs": 2,
+    # This not open ai key can only be used with this model
+    "model": "gpt-3.5-turbo" 
+}
+
 def call_generate_keys_function():
     openAiKey = input("Enter your OpenAI API key: ")
 
@@ -15,15 +26,9 @@ def call_generate_keys_function():
     url = "https://us-central1-notopenai-31af6.cloudfunctions.net/generateKeys"
     
     # Payload matching the function's expected JSON structure
-    payload = {
-        "openAiKey": openAiKey,
-        "numKeys": n_keys,
-        "maxRequestsWithoutReset": 3,
-        "maxTotalTokens": 1500000,
-        "maxTokensPerRequest": 500,
-        "resetTimeSecs": 2,
-        "model": "gp-3.5-turbo"  # or "gpt-3.5-turbo" if that's what you intend
-    }
+    payload = options
+    payload["openAiKey"] = openAiKey,
+    payload["numKeys"] = n_keys
     
     # Set the headers to indicate JSON content
     headers = {

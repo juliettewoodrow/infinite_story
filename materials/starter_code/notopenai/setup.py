@@ -8,7 +8,7 @@ setup(
         'requests',  # Ensure you add all necessary dependencies here.
     ],
     description='A Python client for NotOpenAI API',
-    author='Your Name',
-    author_email='your.email@example.com',
+    author='Chris Piech',
+    author_email='piech@cs.stanford.edu',
     keywords='API AI',
 )
